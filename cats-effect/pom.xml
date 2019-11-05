@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>hakuna.matata</groupId>
+    <artifactId>cats-effect</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>cats-io</module>
+    </modules>
+
+    <properties>
+        <scala.binary.version>2.11</scala.binary.version>
+        <cats.effect.version>2.0.0</cats.effect.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- https://mvnrepository.com/artifact/org.typelevel/cats-effect -->
+            <dependency>
+                <groupId>org.typelevel</groupId>
+                <artifactId>cats-effect_${scala.binary.version}</artifactId>
+                <version>${cats.effect.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
