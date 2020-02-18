@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: greeting-service
+server:
+  port: 3001
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://peer1:8761/eureka,http://peer2:8760/eureka
+    instance:
+      preferIpAddress: true
